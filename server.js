@@ -4,7 +4,9 @@ const port = process.env.PORT || 8080;
 
 app.get('/', (req, res) => {
   res.send(`<h1>Hello from Azure App Service 🚀</h1>
-            <p>Environment: ${process.env.ENVIRONMENT || 'development'}</p>`);
+            <p>Environment: ${process.env.ENVIRONMENT || 'development'}</p>
+            <p>Author: ${process.env.AUTHOR || 'author'}</p>
+            <p>GPT_API_KEY: ${process.env.GPT_API_KEY || 'secret'}</p>`);
 });
 
 app.listen(port, () => console.log(`Server listening on port ${port}`));
